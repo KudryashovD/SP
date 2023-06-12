@@ -1,0 +1,23 @@
+﻿<Window x:Class="SimpleProgrammer.UserFolder.MobileTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleProgrammer.UserFolder"
+        mc:Ignorable="d"
+        Title="MobileTest" Height="900" Width="1600">
+    <Viewbox>
+        <Border Height="900" Width="1600">
+            <Grid>
+                <Image Source="/Images/Menu.png" Margin="0,0,1380,0"/>
+                <Image Source="/Images/Account.png" Margin="0,10,1380,708"/>
+                <Image Source="/Images/Arrow.png" Margin="22,651,1402,124"/>
+                <Image Source="/Images/Themes.png" Margin="0,292,1380,426"/>
+                <TextBlock FontSize="64" Text="Мобилка" VerticalAlignment="Center" TextAlignment="Center" Margin="679,32,534,770"/>
+                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Легко" Margin="282,272,0,517" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="591"/>
+                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Вопросы" Margin="358,510,0,48" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="1028" TextChanged="TextBox_TextChanged"/>
+                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Сложно" Margin="948,272,0,517" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="591"/>
+            </Grid>
+        </Border>
+    </Viewbox>
+</Window>
