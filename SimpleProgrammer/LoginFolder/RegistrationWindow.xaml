@@ -41,7 +41,7 @@
                     </PasswordBox.Resources>
                 </PasswordBox>
                 <TextBlock Text="Password" Margin="635,434,810,419" FontSize="36"/>
-                <Button Content="LET'S GO" HorizontalAlignment="Center" Margin="0,706,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF42AAFF" Width="460" Height="70" FontSize="48"/>
+                <Button Content="LET'S GO" HorizontalAlignment="Center" Margin="0,706,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF42AAFF" Width="460" Height="70" FontSize="48" Click="Login"/>
                 <TextBox Width="500" Height="70" Margin="603,355,497,475" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">

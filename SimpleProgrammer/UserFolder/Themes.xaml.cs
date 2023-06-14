@@ -19,11 +19,35 @@ namespace SimpleProgrammer.UserFolder
     /// </summary>
     public partial class Themes : Window
     {
-        public Themes()
+        int id;
+        public Themes(int ID)
         {
             InitializeComponent();
+           id = ID;
         }
-
+        private void Account(object sender, RoutedEventArgs e)
+        {
+            Entities entity = new Entities();
+            List<User_registration> registr = entity.User_registration.ToList();
+            List<Users> user = entity.Users.ToList();
+            AccountWindow window = new AccountWindow(id);
+            foreach (var item in user)
+            {
+                foreach (var item2 in registr)
+                {
+                    if (id == item.ID && id == item2.ID)
+                    {
+                        window.FIO.Text = item2.FIO;
+                        window.Phone.Text = item2.Phone;
+                        window.Email.Text = item2.E_mail;
+                        window.Login.Text = item.Login;
+                        window.Password.Text = item.Password;
+                    }
+                }
+            }
+            window.Show();
+            this.Close();
+        }
         private void Data(object sender, RoutedEventArgs e)
         {
             DataWindow window = new DataWindow();
