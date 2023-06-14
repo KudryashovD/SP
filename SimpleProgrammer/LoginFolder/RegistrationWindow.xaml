@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleProgrammer.LoginFolder"
         mc:Ignorable="d"
+        WindowState="Maximized"
         Title="RegistrationWindow" Height="900" Width="1600">
     <Window.Background>
         <ImageBrush ImageSource="/Images/Background.png"/>
@@ -15,17 +16,17 @@
                 <Image Source="/Images/ProgramName.png"/>
                 <Image Source="/Images/RegistrationBack.png" Margin="425,76,425,104" Width="750" Height="720"/>
                 <TextBlock HorizontalAlignment="Center" Margin="0,88,0,0" TextWrapping="Wrap" Text="Registration" VerticalAlignment="Top" Foreground="White" FontSize="48"/>
-                <Image Source="/Images/logologin.png" Width="90" Height="90" Margin="509,214,1001,596"/>
-                <TextBox Width="500" Height="70" Margin="603,224,497,606" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" TextChanged="TextBox_TextChanged">
+                <Image Source="/Images/logologin.png" Margin="508,206,1006,624"/>
+                <TextBox Name="FIO" TextAlignment="Center" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="475" Margin="597,213,0,632" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="33"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBlock Text="FIO" Margin="635,176,879,677" FontSize="36"/>
-                <Image Source="/Images/logopassword.png" Width="120" Height="80" Margin="493,477,987,343"/>
-                <PasswordBox Width="500" Height="70" Margin="603,482,497,348" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                <TextBlock Text="FIO" Margin="628,174,890,663" FontSize="36"/>
+                <Image Source="/Images/logopassword.png" Margin="493,410,993,427"/>
+                <PasswordBox Name="Password" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="475" Margin="597,414,0,431" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
                     <PasswordBox.Resources>
                         <Style x:Key="{x:Type PasswordBox}" TargetType="{x:Type PasswordBox}">
                             <Setter Property="Template">
@@ -40,35 +41,35 @@
                         </Style>
                     </PasswordBox.Resources>
                 </PasswordBox>
-                <TextBlock Text="Password" Margin="635,434,810,419" FontSize="36"/>
-                <Button Content="LET'S GO" HorizontalAlignment="Center" Margin="0,706,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF42AAFF" Width="460" Height="70" FontSize="48" Click="Login"/>
-                <TextBox Width="500" Height="70" Margin="603,355,497,475" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                <TextBlock Text="Hobby" Margin="623,571,822,282" FontSize="36"/>
+                <Button Content="LET'S GO" HorizontalAlignment="Center" Margin="0,706,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF42AAFF" Width="460" Height="70" FontSize="48" Click="LetsGo"/>
+                <TextBox Name="Login" TextAlignment="Center" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="475" Margin="597,315,0,530" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="33"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBlock Text="Login" Margin="635,302,879,551" FontSize="36"/>
-                <Image Source="/Images/logologin.png" Width="90" Height="90" Margin="508,345,1002,465"/>
-                <PasswordBox Width="500" Height="70" Margin="603,607,497,223" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
-                    <PasswordBox.Resources>
-                        <Style x:Key="{x:Type PasswordBox}" TargetType="{x:Type PasswordBox}">
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="{x:Type PasswordBox}">
-                                        <Border CornerRadius="33" BorderThickness="3" BorderBrush="#FF42AAFF">
-                                            <ScrollViewer x:Name="PART_ContentHost"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
+                <TextBlock Text="Login" Margin="628,268,880,586" FontSize="36"/>
+                <Image Source="/Images/logologin.png" Margin="507,308,1007,522"/>
+                <TextBox Name="Phone" TextAlignment="Center" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="475" Margin="597,512,0,334" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="33"/>
                         </Style>
-                    </PasswordBox.Resources>
-                </PasswordBox>
-                <TextBlock Text="Phone" Margin="635,559,810,294" FontSize="36"/>
-                <TextBlock Text="Password" Margin="635,434,810,419" FontSize="36"/>
-                <Image Source="/Images/logophone.png" Width="120" Height="80" Margin="493,602,987,218"/>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBlock Text="Phone" Margin="628,469,825,382" FontSize="36"/>
+                <TextBlock Text="Password" Margin="626,371,827,483" FontSize="36"/>
+                <Image Source="/Images/logophone.png" Margin="493,508,993,330"/>
+                <TextBox Name="Hobby" TextAlignment="Center" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="475" Margin="597,624,0,222" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="33"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <Image Source="/Images/logouvl.png" Margin="493,620,993,218"/>
 
             </Grid>
         </Border>

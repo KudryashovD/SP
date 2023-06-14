@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -61,7 +70,34 @@
     <Compile Include="AdminFolder\TestAdminWindow.xaml.cs">
       <DependentUpon>TestAdminWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Administration.cs">
+      <DependentUpon>ProgrammingIsSimple.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingIsSimple.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgrammingIsSimple.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingIsSimple.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgrammingIsSimple.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingIsSimple.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgrammingIsSimple.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests.cs">
+      <DependentUpon>ProgrammingIsSimple.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Test_results.cs">
+      <DependentUpon>ProgrammingIsSimple.tt</DependentUpon>
+    </Compile>
     <Compile Include="text.cs" />
+    <Compile Include="Themes.cs">
+      <DependentUpon>ProgrammingIsSimple.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserFolder\AccountWindow.xaml.cs">
       <DependentUpon>AccountWindow.xaml</DependentUpon>
     </Compile>
@@ -103,6 +139,12 @@
     </Compile>
     <Compile Include="UserFolder\Themes.xaml.cs">
       <DependentUpon>Themes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <DependentUpon>ProgrammingIsSimple.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User_registration.cs">
+      <DependentUpon>ProgrammingIsSimple.tt</DependentUpon>
     </Compile>
     <Page Include="AdminFolder\AdminSearchWindow.xaml">
       <SubType>Designer</SubType>
@@ -206,6 +248,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
+    <EntityDeploy Include="ProgrammingIsSimple.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ProgrammingIsSimple.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ProgrammingIsSimple.edmx.diagram">
+      <DependentUpon>ProgrammingIsSimple.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -270,6 +320,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\logotest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProgrammingIsSimple.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProgrammingIsSimple.edmx</DependentUpon>
+      <LastGenOutput>ProgrammingIsSimple.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProgrammingIsSimple.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProgrammingIsSimple.edmx</DependentUpon>
+      <LastGenOutput>ProgrammingIsSimple.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

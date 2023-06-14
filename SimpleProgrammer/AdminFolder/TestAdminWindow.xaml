@@ -13,7 +13,7 @@
                 <Image Source="/Images/Menu.png" Margin="0,0,1380,0"/>
                 <Image Source="/Images/logoinf.png" Margin="12,330,1393,387"/>
                 <TextBlock Text="ФИО ребёнка" Width="560" FontSize="48" TextAlignment="Center" Margin="585,30,455,803"/>
-                <TextBox Margin="468,102,338,706" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" TextChanged="TextBox_TextChanged">
+                <TextBox Margin="468,102,338,706" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="33"/>

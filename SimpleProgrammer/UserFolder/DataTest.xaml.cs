@@ -19,25 +19,27 @@ namespace SimpleProgrammer.UserFolder
     /// </summary>
     public partial class DataTest : Window
     {
-        public DataTest()
+        int id;
+        public DataTest(int ID)
         {
             InitializeComponent();
+            id = ID;
         }
         private void Easy(object sender, RoutedEventArgs e)
         {
-            DataEasyTest window = new DataEasyTest();
+            DataEasyTest window = new DataEasyTest(id);
             window.Show();
             this.Close();
         }
         private void Hard(object sender, RoutedEventArgs e)
         {
-            DataHardTest window = new DataHardTest();
+            DataHardTest window = new DataHardTest(id);
             window.Show();
             this.Close();
         }
         private void Back(object sender, RoutedEventArgs e)
         {
-            DataWindow window = new DataWindow();
+            DataWindow window = new DataWindow(id);
             window.Show();
             this.Close();
         }

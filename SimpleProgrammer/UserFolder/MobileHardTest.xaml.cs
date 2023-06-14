@@ -19,13 +19,15 @@ namespace SimpleProgrammer.UserFolder
     /// </summary>
     public partial class MobileHardTest : Window
     {
-        public MobileHardTest()
+        int id;
+        public MobileHardTest(int ID)
         {
             InitializeComponent();
+            id = ID;
         }
         private void Back(object sender, RoutedEventArgs e)
         {
-            MobileTest window = new MobileTest();
+            MobileTest window = new MobileTest(id);
             window.Show();
             this.Close();
         }

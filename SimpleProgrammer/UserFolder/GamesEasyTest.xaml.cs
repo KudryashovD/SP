@@ -19,13 +19,15 @@ namespace SimpleProgrammer.UserFolder
     /// </summary>
     public partial class GamesEasyTest : Window
     {
-        public GamesEasyTest()
+        int id;
+        public GamesEasyTest(int ID)
         {
             InitializeComponent();
+            id = ID;
         }
         private void Back(object sender, RoutedEventArgs e)
         {
-            GameTest window = new GameTest();
+            GameTest window = new GameTest(id);
             window.Show();
             this.Close();
         }

@@ -19,25 +19,27 @@ namespace SimpleProgrammer.UserFolder
     /// </summary>
     public partial class MobileTest : Window
     {
-        public MobileTest()
+        int id;
+        public MobileTest(int ID)
         {
             InitializeComponent();
+            id = ID;
         }
         private void Easy(object sender, RoutedEventArgs e)
         {
-            MobileEasyTest window = new MobileEasyTest();
+            MobileEasyTest window = new MobileEasyTest(id);
             window.Show();
             this.Close();
         }
         private void Hard(object sender, RoutedEventArgs e)
         {
-            MobileHardTest window = new MobileHardTest();
+            MobileHardTest window = new MobileHardTest(id);
             window.Show();
             this.Close();
         }
         private void Back(object sender, RoutedEventArgs e)
         {
-            MobileWindow window = new MobileWindow();
+            MobileWindow window = new MobileWindow(id);
             window.Show();
             this.Close();
         }

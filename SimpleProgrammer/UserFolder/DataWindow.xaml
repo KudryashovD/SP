@@ -11,32 +11,50 @@
         <Border Height="900" Width="1600">
             <Grid>
                 <Image Source="/Images/Menu.png" Margin="0,0,1380,0"/>
-                <Image Source="/Images/Account.png" Margin="0,10,1380,708"/>
-                <Image Source="/Images/Tests.png" Margin="0,590,1380,128"/>
-                <Image Source="/Images/Themes.png" Margin="0,292,1380,426"/>
-                <Button Content="" HorizontalAlignment="Left" Margin="0,590,0,0" VerticalAlignment="Top" Height="176" Width="210" FontSize="32" Foreground="#D9D9D9" BorderBrush="#D9D9D9" IsCancel="True" Click="Test">
+                <Button Content="" HorizontalAlignment="Left" Margin="5,38,0,0" VerticalAlignment="Top" Height="176" Width="210" FontSize="32" Foreground="#D9D9D9" BorderBrush="#D9D9D9" IsCancel="True" Click="Account">
                     <Button.Template>
                         <ControlTemplate>
                             <Grid>
-                                <Image Source="/Images/Arrow.png" Margin="22,651,1402,124"/>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="540*"/>
+                                    <ColumnDefinition Width="200*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Rectangle RadiusX="20" RadiusY="20" StrokeThickness="2" Fill="#FF42AAFF" Grid.ColumnSpan="2"/>
+                                <Image Source="/Images/Account.png" Grid.ColumnSpan="2" Margin="7,-2,3,0"/>
+
                             </Grid>
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button Content="" HorizontalAlignment="Left" Margin="5,292,0,0" VerticalAlignment="Top" Height="176" Width="210" FontSize="32" Foreground="#D9D9D9" BorderBrush="#D9D9D9" IsCancel="True" Click="Themes">
+                <Button Content="" HorizontalAlignment="Left" Margin="5,633,0,0" VerticalAlignment="Top" Height="176" Width="210" FontSize="32" Foreground="#D9D9D9" BorderBrush="#D9D9D9" IsCancel="True" Click="Test">
                     <Button.Template>
                         <ControlTemplate>
                             <Grid>
-                                <Image Source="/Images/Arrow.png" Margin="22,651,1402,124"/>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="540*"/>
+                                    <ColumnDefinition Width="200*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Rectangle RadiusX="20" RadiusY="20" StrokeThickness="2" Fill="#FF42AAFF" Grid.ColumnSpan="2"/>
+                                <Image Source="/Images/Tests.png" Grid.ColumnSpan="2" Margin="7,-2,3,0"/>
+
                             </Grid>
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button Content="" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="176" Width="210" FontSize="32" Foreground="#D9D9D9" BorderBrush="#D9D9D9" IsCancel="True" Click="Account">
+                <Button Content="" HorizontalAlignment="Left" Margin="5,340,0,0" VerticalAlignment="Top" Height="176" Width="210" FontSize="32" Foreground="#D9D9D9" BorderBrush="#D9D9D9" IsCancel="True" Click="Themes">
                     <Button.Template>
                         <ControlTemplate>
                             <Grid>
-                                <Image Source="/Images/Arrow.png" Margin="22,651,1402,124"/>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="540*"/>
+                                    <ColumnDefinition Width="200*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Rectangle RadiusX="20" RadiusY="20" StrokeThickness="2" Fill="#FF42AAFF" Grid.ColumnSpan="2"/>
+                                <Image Source="/Images/Themes.png" Grid.ColumnSpan="2" Margin="7,-2,3,0"/>
+
                             </Grid>
                         </ControlTemplate>
                     </Button.Template>
@@ -47,10 +65,10 @@
                 <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="могут принимать данные, принадлежащие к этому типу. " Margin="243,362,0,426" FontSize="34" BorderThickness="3,0,3,3" BorderBrush="#FF42AAFF" Width="687"/>
                 <TextBox HorizontalAlignment="Left" TextAlignment="Left" IsReadOnly="True" Text="к этому типу." Margin="243,418,0,426" FontSize="34" BorderThickness="3,0,3,3" BorderBrush="#FF42AAFF" Width="687"/>
                 <Image Source="/Images/Data.png" Margin="972,254,90,431"/>
-                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Логический тип: Boolean" Margin="358,510,0,48" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="1028" TextChanged="TextBox_TextChanged"/>
-                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Целочисленный тип: integer" Margin="358,590,0,48" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="1028" TextChanged="TextBox_TextChanged"/>
-                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Числа с плавающей запятой: float" Margin="358,681,0,48" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="1028" TextChanged="TextBox_TextChanged"/>
-                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Строковый тип: string" Margin="358,766,0,48" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="1028" TextChanged="TextBox_TextChanged"/>
+                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Логический тип: Boolean" Margin="358,510,0,48" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="1028"/>
+                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Целочисленный тип: integer" Margin="358,590,0,48" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="1028"/>
+                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Числа с плавающей запятой: float" Margin="358,681,0,48" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="1028"/>
+                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Строковый тип: string" Margin="358,766,0,48" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="1028"/>
             </Grid>
         </Border>
     </Viewbox>

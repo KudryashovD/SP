@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище ProgrammingIsSimpleModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Administration">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Test_results">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="User" Type="int" />
+          <Property Name="Admin" Type="int" />
+          <Property Name="Test" Type="int" />
+          <Property Name="Complexity" Type="varchar" MaxLength="50" />
+          <Property Name="Result" Type="int" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tests">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Theme" Type="int" />
+        </EntityType>
+        <EntityType Name="Themes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Desription" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="User_registration">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FIO" Type="varchar" MaxLength="200" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Hobby" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Login" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Test_results_Administration">
+          <End Role="Administration" Type="Self.Administration" Multiplicity="0..1" />
+          <End Role="Test_results" Type="Self.Test_results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Administration">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Test_results">
+              <PropertyRef Name="Admin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Test_results_Tests">
+          <End Role="Tests" Type="Self.Tests" Multiplicity="0..1" />
+          <End Role="Test_results" Type="Self.Test_results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tests">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Test_results">
+              <PropertyRef Name="Test" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Test_results_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Test_results" Type="Self.Test_results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Test_results">
+              <PropertyRef Name="User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tests_Themes">
+          <End Role="Themes" Type="Self.Themes" Multiplicity="0..1" />
+          <End Role="Tests" Type="Self.Tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Themes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="Theme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_User_registration">
+          <End Role="User_registration" Type="Self.User_registration" Multiplicity="1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="User_registration">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище ProgrammingIsSimpleModelContainer">
+          <EntitySet Name="Administration" EntityType="Self.Administration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Test_results" EntityType="Self.Test_results" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tests" EntityType="Self.Tests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Themes" EntityType="Self.Themes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_registration" EntityType="Self.User_registration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Test_results_Administration" Association="Self.FK_Test_results_Administration">
+            <End Role="Administration" EntitySet="Administration" />
+            <End Role="Test_results" EntitySet="Test_results" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Test_results_Tests" Association="Self.FK_Test_results_Tests">
+            <End Role="Tests" EntitySet="Tests" />
+            <End Role="Test_results" EntitySet="Test_results" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Test_results_Users" Association="Self.FK_Test_results_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Test_results" EntitySet="Test_results" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tests_Themes" Association="Self.FK_Tests_Themes">
+            <End Role="Themes" EntitySet="Themes" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_User_registration" Association="Self.FK_Users_User_registration">
+            <End Role="User_registration" EntitySet="User_registration" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProgrammingIsSimpleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Administration">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Test_results" Relationship="ProgrammingIsSimpleModel.FK_Test_results_Administration" FromRole="Administration" ToRole="Test_results" />
+        </EntityType>
+        <EntityType Name="Tests">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Theme" Type="Int32" />
+          <NavigationProperty Name="Themes" Relationship="Self.FK_Tests_Themes" FromRole="Tests" ToRole="Themes" />
+          <NavigationProperty Name="Test_results" Relationship="ProgrammingIsSimpleModel.FK_Test_results_Tests" FromRole="Tests" ToRole="Test_results" />
+        </EntityType>
+        <EntityType Name="Themes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Desription" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tests" Relationship="Self.FK_Tests_Themes" FromRole="Themes" ToRole="Tests" />
+        </EntityType>
+        <EntityType Name="User_registration">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Hobby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Users_User_registration" FromRole="User_registration" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="User_registration" Relationship="Self.FK_Users_User_registration" FromRole="Users" ToRole="User_registration" />
+          <NavigationProperty Name="Test_results" Relationship="ProgrammingIsSimpleModel.FK_Test_results_Users" FromRole="Users" ToRole="Test_results" />
+        </EntityType>
+        <Association Name="FK_Tests_Themes">
+          <End Role="Themes" Type="Self.Themes" Multiplicity="0..1" />
+          <End Role="Tests" Type="Self.Tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Themes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="Theme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_User_registration">
+          <End Role="User_registration" Type="Self.User_registration" Multiplicity="1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="User_registration">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Administration" EntityType="Self.Administration" />
+          <EntitySet Name="Tests" EntityType="Self.Tests" />
+          <EntitySet Name="Themes" EntityType="Self.Themes" />
+          <EntitySet Name="User_registration" EntityType="Self.User_registration" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <AssociationSet Name="FK_Tests_Themes" Association="Self.FK_Tests_Themes">
+            <End Role="Themes" EntitySet="Themes" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_User_registration" Association="Self.FK_Users_User_registration">
+            <End Role="User_registration" EntitySet="User_registration" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <EntitySet Name="Test_results" EntityType="ProgrammingIsSimpleModel.Test_results" />
+          <AssociationSet Name="FK_Test_results_Administration" Association="ProgrammingIsSimpleModel.FK_Test_results_Administration">
+            <End Role="Administration" EntitySet="Administration" />
+            <End Role="Test_results" EntitySet="Test_results" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Test_results_Tests" Association="ProgrammingIsSimpleModel.FK_Test_results_Tests">
+            <End Role="Tests" EntitySet="Tests" />
+            <End Role="Test_results" EntitySet="Test_results" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Test_results_Users" Association="ProgrammingIsSimpleModel.FK_Test_results_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Test_results" EntitySet="Test_results" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Test_results">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="User" Type="Int32" />
+          <Property Name="Admin" Type="Int32" />
+          <Property Name="Test" Type="Int32" />
+          <Property Name="Complexity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Result" Type="Int32" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Administration" Relationship="ProgrammingIsSimpleModel.FK_Test_results_Administration" FromRole="Test_results" ToRole="Administration" />
+          <NavigationProperty Name="Tests" Relationship="ProgrammingIsSimpleModel.FK_Test_results_Tests" FromRole="Test_results" ToRole="Tests" />
+          <NavigationProperty Name="Users" Relationship="ProgrammingIsSimpleModel.FK_Test_results_Users" FromRole="Test_results" ToRole="Users" />
+        </EntityType>
+        <Association Name="FK_Test_results_Administration">
+          <End Type="ProgrammingIsSimpleModel.Administration" Role="Administration" Multiplicity="0..1" />
+          <End Type="ProgrammingIsSimpleModel.Test_results" Role="Test_results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Administration">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Test_results">
+              <PropertyRef Name="Admin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Test_results_Tests">
+          <End Type="ProgrammingIsSimpleModel.Tests" Role="Tests" Multiplicity="0..1" />
+          <End Type="ProgrammingIsSimpleModel.Test_results" Role="Test_results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tests">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Test_results">
+              <PropertyRef Name="Test" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Test_results_Users">
+          <End Type="ProgrammingIsSimpleModel.Users" Role="Users" Multiplicity="0..1" />
+          <End Type="ProgrammingIsSimpleModel.Test_results" Role="Test_results" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Test_results">
+              <PropertyRef Name="User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ProgrammingIsSimpleModelContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Administration">
+            <EntityTypeMapping TypeName="ProgrammingIsSimpleModel.Administration">
+              <MappingFragment StoreEntitySet="Administration">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tests">
+            <EntityTypeMapping TypeName="ProgrammingIsSimpleModel.Tests">
+              <MappingFragment StoreEntitySet="Tests">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Theme" ColumnName="Theme" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Themes">
+            <EntityTypeMapping TypeName="ProgrammingIsSimpleModel.Themes">
+              <MappingFragment StoreEntitySet="Themes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Desription" ColumnName="Desription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_registration">
+            <EntityTypeMapping TypeName="ProgrammingIsSimpleModel.User_registration">
+              <MappingFragment StoreEntitySet="User_registration">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FIO" ColumnName="FIO" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Hobby" ColumnName="Hobby" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="ProgrammingIsSimpleModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Test_results">
+            <EntityTypeMapping TypeName="ProgrammingIsSimpleModel.Test_results">
+              <MappingFragment StoreEntitySet="Test_results">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="Complexity" ColumnName="Complexity" />
+                <ScalarProperty Name="Test" ColumnName="Test" />
+                <ScalarProperty Name="Admin" ColumnName="Admin" />
+                <ScalarProperty Name="User" ColumnName="User" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

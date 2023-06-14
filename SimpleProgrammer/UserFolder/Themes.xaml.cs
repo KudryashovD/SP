@@ -39,9 +39,8 @@ namespace SimpleProgrammer.UserFolder
                     {
                         window.FIO.Text = item2.FIO;
                         window.Phone.Text = item2.Phone;
-                        window.Email.Text = item2.E_mail;
                         window.Login.Text = item.Login;
-                        window.Password.Text = item.Password;
+                        window.Password.Password = item.Password;
                     }
                 }
             }
@@ -50,19 +49,19 @@ namespace SimpleProgrammer.UserFolder
         }
         private void Data(object sender, RoutedEventArgs e)
         {
-            DataWindow window = new DataWindow();
+            DataWindow window = new DataWindow(id);
             window.Show();
             this.Close();
         }
         private void Games(object sender, RoutedEventArgs e)
         {
-            GameWindow window = new GameWindow();
+            GameWindow window = new GameWindow(id);
             window.Show();
             this.Close();
         }
         private void Mobile(object sender, RoutedEventArgs e)
         {
-            MobileWindow window = new MobileWindow();
+            MobileWindow window = new MobileWindow(id);
             window.Show();
             this.Close();
         }

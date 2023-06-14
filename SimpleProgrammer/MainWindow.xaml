@@ -17,7 +17,7 @@
                 <Image Source="Images/LoginBack.png" Margin="234,190,234,191" Width="750" Height="550"/>
                 <TextBlock HorizontalAlignment="Center" Margin="0,197,0,0" TextWrapping="Wrap" Text="Log In" VerticalAlignment="Top" Foreground="White" FontSize="48"/>
                 <Image Source="Images/logologin.png" Width="90" Height="90" Margin="508,319,1002,491"/>
-                <TextBox Width="500" Height="70" Margin="603,333,497,497" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                <TextBox Name="Login" TextAlignment="Center" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="500" Height="70" Margin="603,333,497,497" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="33"/>
@@ -26,7 +26,7 @@
                 </TextBox>
                 <TextBlock Text="Login" Margin="635,280,879,573" FontSize="36"/>
                 <Image Source="Images/logopassword.png" Width="120" Height="80" Margin="494,460,986,360"/>
-                <PasswordBox Width="500" Height="70" Margin="603,465,497,365" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                <PasswordBox Name="Password" HorizontalContentAlignment="Center" FontSize="20" VerticalContentAlignment="Center"  HorizontalAlignment="Left" Width="500" Height="70" Margin="603,465,497,365" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
                     <PasswordBox.Resources>
                         <Style x:Key="{x:Type PasswordBox}" TargetType="{x:Type PasswordBox}">
                             <Setter Property="Template">
@@ -42,8 +42,8 @@
                     </PasswordBox.Resources>
                 </PasswordBox>
                 <TextBlock Text="Password" Margin="635,412,810,441" FontSize="36"/>
-                <Button Content="WELCOME" HorizontalAlignment="Center" Margin="0,565,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF42AAFF" Width="460" Height="70" FontSize="48" Click="Button_Click"/>
-                <Button Content="Or SING UP" HorizontalAlignment="Center" Margin="0,640,0,0" VerticalAlignment="Top" FontSize="40" BorderBrush="#FFDDDDDD"/>
+                <Button Content="WELCOME" HorizontalAlignment="Center" Margin="0,565,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF42AAFF" Width="460" Height="70" FontSize="48" Click="Themes"/>
+                <Button Content="Or SING UP" HorizontalAlignment="Center" Margin="0,640,0,0" VerticalAlignment="Top" FontSize="40" BorderBrush="#FFDDDDDD" Click="Registration"/>
 
             </Grid>
         </Border>

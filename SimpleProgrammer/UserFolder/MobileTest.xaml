@@ -10,20 +10,26 @@
     <Viewbox>
         <Border Height="900" Width="1600">
             <Grid>
-                <Image Source="/Images/Menu.png" Margin="0,0,1380,0"/>
-                <Image Source="/Images/Arrow.png" Margin="22,300,1402,476"/>
-                <TextBlock FontSize="64" Text="Мобилка" VerticalAlignment="Center" TextAlignment="Center" Margin="679,32,534,770"/>
-                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Легко" Margin="282,272,0,517" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="591"/>
-                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Сложно" Margin="948,272,0,517" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="591"/>
-                <Button Content="" HorizontalAlignment="Left" Margin="0,274,0,0" VerticalAlignment="Top" Height="176" Width="210" FontSize="32" Foreground="#D9D9D9" BorderBrush="#D9D9D9" IsCancel="True" Click="Back">
+                <Image Source="/Images/Menu.png" Margin="-10,0,1390,0"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="-10,327,0,0" VerticalAlignment="Top" Height="176" Width="210" FontSize="32" Foreground="#D9D9D9" BorderBrush="#D9D9D9" IsCancel="True" Click="Back">
                     <Button.Template>
                         <ControlTemplate>
                             <Grid>
-                                <Image Source="/Images/Arrow.png" Margin="22,651,1402,124"/>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="540*"/>
+                                    <ColumnDefinition Width="200*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Rectangle RadiusX="20" RadiusY="20" StrokeThickness="2" Fill="#FF42AAFF" Grid.ColumnSpan="2"/>
+                                <Image Source="/Images/Arrow.png" Grid.ColumnSpan="2" Margin="7,-2,3,0"/>
+
                             </Grid>
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
+                <TextBlock FontSize="64" Text="Мобилка" VerticalAlignment="Center" TextAlignment="Center" Margin="679,32,534,770"/>
+                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Легко" Margin="282,272,0,517" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="591"/>
+                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Сложно" Margin="948,272,0,517" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="591"/>
             </Grid>
         </Border>
     </Viewbox>

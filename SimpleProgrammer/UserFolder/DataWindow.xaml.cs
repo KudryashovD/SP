@@ -40,9 +40,8 @@ namespace SimpleProgrammer.UserFolder
                     {
                         window.FIO.Text = item2.FIO;
                         window.Phone.Text = item2.Phone;
-                        window.Email.Text = item2.E_mail;
                         window.Login.Text = item.Login;
-                        window.Password.Text = item.Password;
+                        window.Password.Password = item.Password;
                     }
                 }
             }
@@ -51,13 +50,13 @@ namespace SimpleProgrammer.UserFolder
         }
         private void Themes(object sender, RoutedEventArgs e)
         {
-            Themes window = new Themes();
+            Themes window = new Themes(id);
             window.Show();
             this.Close();
         }
         private void Test(object sender, RoutedEventArgs e)
         {
-            DataTest window = new DataTest();
+            DataTest window = new DataTest(id);
             window.Show();
             this.Close();
         }

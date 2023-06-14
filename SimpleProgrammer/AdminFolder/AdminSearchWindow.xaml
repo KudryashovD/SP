@@ -13,14 +13,14 @@
                 <Image Source="/Images/Menu.png" Margin="0,0,1380,0"/>
                 <Image Source="/Images/logoinf.png" Margin="12,330,1393,387"/>
                 <TextBlock Text="Введите ФИО ребёнка" Width="560" FontSize="48" TextAlignment="Center" Margin="585,30,455,803"/>
-                <TextBox Margin="468,102,338,706" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" TextChanged="TextBox_TextChanged">
+                <TextBox Margin="468,102,338,706" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="33"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <Button Content="Найти" HorizontalAlignment="Left" Margin="635,231,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF42AAFF" Width="460" Height="70" FontSize="48" Click="Button_Click"/>
+                <Button Content="Найти" HorizontalAlignment="Left" Margin="635,231,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF42AAFF" Width="460" Height="70" FontSize="48"/>
                 <TextBox Width="500" Height="70" Margin="434,424,666,406" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">

@@ -30,13 +30,11 @@ namespace SimpleProgrammer.LoginFolder
             id = ID;
         }
 
-        private void Register(object sender, RoutedEventArgs e)
+        private void LetsGo(object sender, RoutedEventArgs e)
         {
             try
             {
-                Trace.Listeners.Add(new TextWriterTraceListener(File.Open("svodkaregistr.txt", FileMode.OpenOrCreate)));
-                Trace.AutoFlush = true;
-                Entities entity = new Entities();
+               Entities entity = new Entities();
                 User_registration reg = new User_registration();
                 List<User_registration> registr = entity.User_registration.ToList();
                 List<Users> user = entity.Users.ToList();
@@ -49,20 +47,20 @@ namespace SimpleProgrammer.LoginFolder
                 bool rg = password.IsMatch(Password.Password);
                 Regex phone = new Regex(@"^\+79|89[0-9]{9}$");
                 bool ph = phone.IsMatch(Phone.Text);
-                Regex mail = new Regex("[a-z].+[@]{1}[a-z].+[.]{1}");
-                bool ml = mail.IsMatch(Email.Text);
+                Regex hobby = new Regex(@"^[А-Я]{1}[а-я]{6,}$");
+                bool hb = hobby.IsMatch(Hobby.Text);
                 foreach (var item2 in user)
                 {
                     foreach (var item in registr)
                     {
-                        if (item2.Login == Login.Text || item.E_mail == Email.Text || item.Phone == Phone.Text)
+                        if (item2.Login == Login.Text || item.Phone == Phone.Text)
                         {
                             MessageBox.Show("Пользователь с такими данными уже зарегестрирован");
                             return;
                         }
                     }
                 }
-                if (ml == false || fl == false || fg == false || rg == false || ph == false)
+                if (hb == false || fl == false || fg == false || rg == false || ph == false)
                 {
                     MessageBox.Show("Не все данные введены верно");
                 }
@@ -76,11 +74,11 @@ namespace SimpleProgrammer.LoginFolder
                     MessageBox.Show("В пароле должны содержаться заглавные и строчные буквы Латинского алфавита, а также цифры! Количество символов в пароле должно быть больше 6!");
                     return;
                 }
-                if (ml && fl && fg && rg && ph)
+                if (hb && fl && fg && rg && ph)
                 {
                     reg.FIO = FIO.Text;
                     reg.Phone = Phone.Text;
-                    reg.E_mail = Email.Text;
+                    reg.Hobby = Hobby.Text;
                     users.Login = Login.Text;
                     users.Password = Password.Password;
                     entity.Users.Add(users);
@@ -90,7 +88,6 @@ namespace SimpleProgrammer.LoginFolder
                     Trace.WriteLine("-------------------------------");
                     Trace.WriteLine(FIO.Text);
                     Trace.WriteLine(Phone.Text);
-                    Trace.WriteLine(Email.Text);
                     Trace.WriteLine(Login.Text);
                     Trace.WriteLine(Password.Password);
                     Trace.WriteLine("-------------------------------");

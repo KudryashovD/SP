@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6845d311ab194a469684b9c925b3a4a8" Name="Diagram1">
+        <EntityTypeShape EntityType="ProgrammingIsSimpleModel.Administration" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProgrammingIsSimpleModel.Tests" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProgrammingIsSimpleModel.Themes" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProgrammingIsSimpleModel.User_registration" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProgrammingIsSimpleModel.Users" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="ProgrammingIsSimpleModel.FK_Tests_Themes" ManuallyRouted="false" />
+        <AssociationConnector Association="ProgrammingIsSimpleModel.FK_Users_User_registration" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ProgrammingIsSimpleModel.Test_results" Width="1.5" PointX="8" PointY="1.875" />
+        <AssociationConnector Association="ProgrammingIsSimpleModel.FK_Test_results_Administration" />
+        <AssociationConnector Association="ProgrammingIsSimpleModel.FK_Test_results_Tests" />
+        <AssociationConnector Association="ProgrammingIsSimpleModel.FK_Test_results_Users" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
