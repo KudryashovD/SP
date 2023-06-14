@@ -24,9 +24,23 @@ namespace SimpleProgrammer.UserFolder
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Account(object sender, RoutedEventArgs e)
         {
-
+            AccountWindow window = new AccountWindow();
+            window.Show();
+            this.Close();
+        }
+        private void Themes(object sender, RoutedEventArgs e)
+        {
+            Themes window = new Themes();
+            window.Show();
+            this.Close();
+        }
+        private void Test(object sender, RoutedEventArgs e)
+        {
+            DataTest window = new DataTest();
+            window.Show();
+            this.Close();
         }
     }
 }

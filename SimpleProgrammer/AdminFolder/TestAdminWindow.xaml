@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleProgrammer.AdminFolder"
         mc:Ignorable="d"
+        WindowState="Maximized"
         Title="TestAdminWindow" Height="900" Width="1600">
     <Viewbox>
         <Border Height="900" Width="1600">
@@ -45,6 +46,15 @@
                 <TextBlock Text="Сложность" FontSize="48" Margin="413,455,937,382"/>
                 <TextBlock Text="Результат" FontSize="48" Margin="413,616,955,221"/>
                 <Image Source="/Images/Arrow.png" Margin="-35,30,1345,772"/>
+                <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="176" Width="210" FontSize="32" Foreground="#D9D9D9" BorderBrush="#D9D9D9" IsCancel="True" Click="Back">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Grid>
+                                <Image Source="/Images/Arrow.png" Margin="22,651,1402,124"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </Grid>
         </Border>
     </Viewbox>

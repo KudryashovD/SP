@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleProgrammer.UserFolder"
         mc:Ignorable="d"
-        
+        WindowState="Maximized"
         Title="AccountWindow" Height="900" Width="1600" Background="#FFD9D9D9">
     <Viewbox>
         <Border Height="900" Width="1600">

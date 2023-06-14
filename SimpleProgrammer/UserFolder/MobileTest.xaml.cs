@@ -23,5 +23,23 @@ namespace SimpleProgrammer.UserFolder
         {
             InitializeComponent();
         }
+        private void Easy(object sender, RoutedEventArgs e)
+        {
+            MobileEasyTest window = new MobileEasyTest();
+            window.Show();
+            this.Close();
+        }
+        private void Hard(object sender, RoutedEventArgs e)
+        {
+            MobileHardTest window = new MobileHardTest();
+            window.Show();
+            this.Close();
+        }
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            MobileWindow window = new MobileWindow();
+            window.Show();
+            this.Close();
+        }
     }
 }

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleProgrammer.AdminFolder"
         mc:Ignorable="d"
+        WindowState="Maximized"
         Title="AdminSearchWindow" Height="900" Width="1600">
     <Viewbox>
         <Border Height="900" Width="1600">
@@ -53,7 +54,7 @@
                 </TextBox>
                 <Image Source="/Images/logouvl.png" Width="120" Height="80" Margin="324,656,1156,164"/>
                 <Image Source="/Images/logocgild.png" Margin="1066,330,96,142"/>
-                <Button Content="Перейти к тесту" HorizontalAlignment="Left" Margin="635,787,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF42AAFF" Width="460" Height="70" FontSize="48" Click="Button_Click"/>
+                <Button Content="Перейти к тесту" HorizontalAlignment="Left" Margin="635,787,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF42AAFF" Width="460" Height="70" FontSize="48" Click="Tests"/>
             </Grid>
         </Border>
     </Viewbox>

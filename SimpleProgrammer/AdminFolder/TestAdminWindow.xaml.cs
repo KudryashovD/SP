@@ -23,5 +23,11 @@ namespace SimpleProgrammer.AdminFolder
         {
             InitializeComponent();
         }
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            AdminSearchWindow window = new AdminSearchWindow();
+            window.Show();
+            this.Close();
+        }
     }
 }

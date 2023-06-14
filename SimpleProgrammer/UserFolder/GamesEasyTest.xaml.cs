@@ -12,20 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SimpleProgrammer.AdminFolder
+namespace SimpleProgrammer.UserFolder
 {
     /// <summary>
-    /// Логика взаимодействия для AdminSearchWindow.xaml
+    /// Логика взаимодействия для GamesEasyTest.xaml
     /// </summary>
-    public partial class AdminSearchWindow : Window
+    public partial class GamesEasyTest : Window
     {
-        public AdminSearchWindow()
+        public GamesEasyTest()
         {
             InitializeComponent();
         }
-        private void Tests(object sender, RoutedEventArgs e)
+        private void Back(object sender, RoutedEventArgs e)
         {
-           TestAdminWindow window= new TestAdminWindow();
+            GameTest window = new GameTest();
             window.Show();
             this.Close();
         }

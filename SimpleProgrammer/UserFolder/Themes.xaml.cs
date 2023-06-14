@@ -23,5 +23,24 @@ namespace SimpleProgrammer.UserFolder
         {
             InitializeComponent();
         }
+
+        private void Data(object sender, RoutedEventArgs e)
+        {
+            DataWindow window = new DataWindow();
+            window.Show();
+            this.Close();
+        }
+        private void Games(object sender, RoutedEventArgs e)
+        {
+            GameWindow window = new GameWindow();
+            window.Show();
+            this.Close();
+        }
+        private void Mobile(object sender, RoutedEventArgs e)
+        {
+            MobileWindow window = new MobileWindow();
+            window.Show();
+            this.Close();
+        }
     }
 }

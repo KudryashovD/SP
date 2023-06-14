@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleProgrammer.UserFolder"
         mc:Ignorable="d"
+        WindowState="Maximized"
         xmlns:global="clr-namespace:EventForYou"
         Title="Themes" Height="900" Width="1600">
     <Viewbox>
@@ -23,37 +24,78 @@
                     </TextBlock.RenderTransform>
                 </TextBlock>
                 <TextBlock Text="Представленные темы" FontSize="64" Height="80" Margin="548,32,377,788"/>
-                <Image Source="/Images/Data.png" Width="540" Height="200" Margin="260,252,800,448"/>
-                <Image Source="/Images/Mobile.png" Width="540" Height="200" Margin="997,252,63,448"/>
-                <Image Source="/Images/Games.png" Width="540" Height="200" Margin="616,576,444,124"/>
-                <global:OutlinedTextBlock Stroke="Black" 
+                <Button Content="Типы данных" HorizontalAlignment="Left" Margin="311,254,0,0" VerticalAlignment="Top" Width="540" Height="200" FontSize="64" Foreground="#FF767676" Background="{x:Null}" BorderBrush="White" IsCancel="True" Click="Data">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="540*"/>
+                                    <ColumnDefinition Width="200*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Rectangle RadiusX="20" RadiusY="20" StrokeThickness="2" Fill="#FAEDCD" Grid.ColumnSpan="2"/>
+                                <Image Source="/Images/Data.png" Width="540" Height="200" Grid.ColumnSpan="2" Margin="0,-2,0,2"/>
+                                <global:OutlinedTextBlock Stroke="Black" 
                                      ClipToBounds="False"
                                      FontSize="65"
                                      TextAlignment="Center"
-                                     VerticalAlignment="Top"
                                      FontWeight="Bold"
                                      Fill="White"
                                      StrokePosition="Outside"
-                                     StrokeThickness="1" Text="ТИПЫ ДАННЫХ" Margin="-270,308,270,0">
-                </global:OutlinedTextBlock>
-                <global:OutlinedTextBlock Stroke="Black" 
-                    ClipToBounds="False"
-                    FontSize="65"
-                    TextAlignment="Center"
-                    VerticalAlignment="Top"
-                    FontWeight="Bold"
-                    Fill="White"
-                    StrokePosition="Outside"
-                    StrokeThickness="1" Text="МОБИЛКА" Margin="467,308,-467,0"/>
-                <global:OutlinedTextBlock Stroke="Black" 
-                    ClipToBounds="False"
-                    FontSize="65"
-                    TextAlignment="Center"
-                    VerticalAlignment="Top"
-                    FontWeight="Bold"
-                    Fill="White"
-                    StrokePosition="Outside"
-                    StrokeThickness="1" Text="ВИДЕОИГРЫ" Margin="86,632,-86,0"/>
+                                     StrokeThickness="1" Text="ТИПЫ ДАННЫХ" Grid.ColumnSpan="2" Margin="0,52,0,-52"/>
+
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Content="Мобилка" HorizontalAlignment="Left" Margin="989,254,0,0" VerticalAlignment="Top" Width="540" Height="200" FontSize="64" Foreground="#FF767676" Background="{x:Null}" BorderBrush="White" IsCancel="True" Click="Mobile">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="540*"/>
+                                    <ColumnDefinition Width="200*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Rectangle RadiusX="20" RadiusY="20" StrokeThickness="2" Fill="#FAEDCD" Grid.ColumnSpan="2"/>
+                                <Image Source="/Images/Mobile.png" Width="540" Height="200" Grid.ColumnSpan="2" Margin="0,-2,0,2"/>
+                                <global:OutlinedTextBlock Stroke="Black" 
+                                     ClipToBounds="False"
+                                     FontSize="65"
+                                     TextAlignment="Center"
+                                     FontWeight="Bold"
+                                     Fill="White"
+                                     StrokePosition="Outside"
+                                     StrokeThickness="1" Text="МОБИЛКА" Grid.ColumnSpan="2" Margin="0,52,0,-52"/>
+
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Content="Видеоигры" HorizontalAlignment="Left" Margin="641,557,0,0" VerticalAlignment="Top" Width="540" Height="200" FontSize="64" Foreground="#FF767676" Background="{x:Null}" BorderBrush="White" IsCancel="True" Click="Games">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="540*"/>
+                                    <ColumnDefinition Width="200*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Rectangle RadiusX="20" RadiusY="20" StrokeThickness="2" Fill="#FAEDCD" Grid.ColumnSpan="2"/>
+                                <Image Source="/Images/Games.png" Width="540" Height="200" Grid.ColumnSpan="2" Margin="0,-2,0,2"/>
+                                <global:OutlinedTextBlock Stroke="Black" 
+                                     ClipToBounds="False"
+                                     FontSize="65"
+                                     TextAlignment="Center"
+                                     FontWeight="Bold"
+                                     Fill="White"
+                                     StrokePosition="Outside"
+                                     StrokeThickness="1" Text="ВИДЕОИГРЫ" Grid.ColumnSpan="2" Margin="0,52,0,-52"/>
+
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </Grid>
         </Border>
     </Viewbox>
