@@ -13,15 +13,15 @@
                 <Image Source="/Images/Menu.png" Margin="0,0,1380,0"/>
                 <Image Source="/Images/logoinf.png" Margin="12,330,1393,387"/>
                 <TextBlock Text="Введите ФИО ребёнка" Width="560" FontSize="48" TextAlignment="Center" Margin="585,30,455,803"/>
-                <TextBox Margin="468,102,338,706" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                <TextBox Name="FIO" TextAlignment="Center" FontSize="40" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="468,102,0,706" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" Width="817">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="33"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <Button Content="Найти" HorizontalAlignment="Left" Margin="635,231,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF42AAFF" Width="460" Height="70" FontSize="48"/>
-                <TextBox Width="500" Height="70" Margin="434,424,666,406" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                <Button Content="Найти" HorizontalAlignment="Left" Margin="635,231,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF42AAFF" Width="460" Height="70" FontSize="48" Click="Search"/>
+                <TextBox Name="FIO1" TextAlignment="Center" FontSize="30" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="500" Height="70" Margin="434,424,666,406" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="33"/>
@@ -29,23 +29,15 @@
                     </TextBox.Resources>
                 </TextBox>
                 <Image Source="/Images/logologin.png" Width="90" Height="90" Margin="339,414,1171,396"/>
-                <PasswordBox Width="500" Height="70" Margin="434,546,666,284" RenderTransformOrigin="0.465,0.483" Background="#FFD9D9D9" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
-                    <PasswordBox.Resources>
-                        <Style x:Key="{x:Type PasswordBox}" TargetType="{x:Type PasswordBox}">
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="{x:Type PasswordBox}">
-                                        <Border CornerRadius="33" BorderThickness="3" BorderBrush="#FF42AAFF">
-                                            <ScrollViewer x:Name="PART_ContentHost"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
+                <TextBox Name="Phone" TextAlignment="Center" FontSize="30" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="500" Height="70" Margin="434,546,666,284" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="33"/>
                         </Style>
-                    </PasswordBox.Resources>
-                </PasswordBox>
+                    </TextBox.Resources>
+                </TextBox>
                 <Image Source="/Images/logophone.png" Width="120" Height="80" Margin="324,541,1156,279"/>
-                <TextBox Width="500" Height="70" Margin="434,666,666,164" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                <TextBox Name="Hobby" TextAlignment="Center" FontSize="30" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="500" Height="70" Margin="434,666,666,164" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="33"/>

@@ -13,14 +13,14 @@
                 <Image Source="/Images/Menu.png" Margin="0,0,1380,0"/>
                 <Image Source="/Images/logoinf.png" Margin="12,330,1393,387"/>
                 <TextBlock Text="ФИО ребёнка" Width="560" FontSize="48" TextAlignment="Center" Margin="585,30,455,803"/>
-                <TextBox Margin="468,102,338,706" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                <TextBox Name="FIO" TextAlignment="Center" FontSize="50" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="468,102,0,706" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" Width="817">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="33"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox Margin="381,359,676,450" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                <TextBox Name="Tests" TextAlignment="Center" FontSize="40" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="381,359,0,450" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" Width="543">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="33"/>
@@ -28,23 +28,23 @@
                     </TextBox.Resources>
                 </TextBox>
                 <Image Source="/Images/logotest.png" Margin="1066,330,96,142"/>
-                <TextBox Margin="381,518,676,291" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                <TextBox Name="Login" TextAlignment="Center" FontSize="40" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="381,518,0,291" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" Width="543">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="33"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox Margin="381,685,676,124" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3">
+                <TextBox Name="Ball" TextAlignment="Center" FontSize="40" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="381,685,0,124" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" Width="543">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="33"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBlock Text="Тест" FontSize="48" Margin="413,290,1061,547"/>
+                <TextBlock FontSize="48" Margin="298,290,593,547"><Run Language="ru-ru" Text="Количество пройденных тестов"/></TextBlock>
                 <TextBlock Text="Логин" FontSize="48" Margin="413,455,937,382"/>
-                <TextBlock Text="Результат" FontSize="48" Margin="413,616,955,221"/>
+                <TextBlock FontSize="48" Margin="413,616,877,221"><Run Language="ru-ru" Text="Средний балл"/></TextBlock>
                 <Image Source="/Images/Arrow.png" Margin="-35,30,1345,772"/>
                 <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="176" Width="210" FontSize="32" Foreground="#D9D9D9" BorderBrush="#D9D9D9" IsCancel="True" Click="Back">
                     <Button.Template>

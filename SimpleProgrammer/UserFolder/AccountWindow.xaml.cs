@@ -42,7 +42,9 @@ namespace SimpleProgrammer.UserFolder
             bool rg = password.IsMatch(Password.Password);
             Regex phone = new Regex(@"^\+79|89[0-9]{9}$");
             bool ph = phone.IsMatch(Phone.Text);
-            if (fl == false || fg == false || rg == false || ph == false)
+            Regex hobby = new Regex(@"^[А-Я]{1}[а-я]{6,}$");
+            bool hb = hobby.IsMatch(Hobby.Text);
+            if (hb==false || fl == false || fg == false || rg == false || ph == false)
             {
                 MessageBox.Show("Не все данные введены верно");
                 return;
@@ -57,16 +59,16 @@ namespace SimpleProgrammer.UserFolder
                 MessageBox.Show("Пароль и логин не должны совпадать!");
                 return;
             }
-            if (fl && fg && rg && ph)
+            if (hb && fl && fg && rg && ph)
             {
                 Oleg.Login = Login.Text;
                 Oleg.Password = Password.Password;
                 Oleg2.FIO = FIO.Text;
                 Oleg2.Phone = Phone.Text;
+                Oleg2.Hobby = Hobby.Text;
                 entity.SaveChanges();
                 entity.Dispose();
                 Themes cat = new Themes(id);
-                cat.Show();
                 this.Close();
                 MessageBox.Show("Редактирование данных успешно!");
                 return;

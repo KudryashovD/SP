@@ -20,7 +20,6 @@
           <Property Name="User" Type="int" />
           <Property Name="Admin" Type="int" />
           <Property Name="Test" Type="int" />
-          <Property Name="Complexity" Type="varchar" MaxLength="50" />
           <Property Name="Result" Type="int" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
