@@ -101,35 +101,17 @@
     <Compile Include="UserFolder\AccountWindow.xaml.cs">
       <DependentUpon>AccountWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserFolder\DataEasyTest.xaml.cs">
-      <DependentUpon>DataEasyTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserFolder\DataHardTest.xaml.cs">
-      <DependentUpon>DataHardTest.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserFolder\DataTest.xaml.cs">
       <DependentUpon>DataTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserFolder\DataWindow.xaml.cs">
       <DependentUpon>DataWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserFolder\GamesEasyTest.xaml.cs">
-      <DependentUpon>GamesEasyTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserFolder\GamesHardTest.xaml.cs">
-      <DependentUpon>GamesHardTest.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserFolder\GameTest.xaml.cs">
       <DependentUpon>GameTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserFolder\GameWindow.xaml.cs">
       <DependentUpon>GameWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserFolder\MobileEasyTest.xaml.cs">
-      <DependentUpon>MobileEasyTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserFolder\MobileHardTest.xaml.cs">
-      <DependentUpon>MobileHardTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserFolder\MobileTest.xaml.cs">
       <DependentUpon>MobileTest.xaml</DependentUpon>
@@ -177,14 +159,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserFolder\DataEasyTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserFolder\DataHardTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UserFolder\DataTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -193,27 +167,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserFolder\GamesEasyTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserFolder\GamesHardTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UserFolder\GameTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserFolder\GameWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserFolder\MobileEasyTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserFolder\MobileHardTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -17,7 +17,6 @@ namespace SimpleProgrammer
         public Nullable<int> User { get; set; }
         public Nullable<int> Admin { get; set; }
         public Nullable<int> Test { get; set; }
-        public string Complexity { get; set; }
         public Nullable<int> Result { get; set; }
         public int ID { get; set; }
     

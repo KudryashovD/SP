@@ -43,7 +43,7 @@
                     </TextBox.Resources>
                 </TextBox>
                 <TextBlock Text="Тест" FontSize="48" Margin="413,290,1061,547"/>
-                <TextBlock Text="Сложность" FontSize="48" Margin="413,455,937,382"/>
+                <TextBlock Text="Логин" FontSize="48" Margin="413,455,937,382"/>
                 <TextBlock Text="Результат" FontSize="48" Margin="413,616,955,221"/>
                 <Image Source="/Images/Arrow.png" Margin="-35,30,1345,772"/>
                 <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="176" Width="210" FontSize="32" Foreground="#D9D9D9" BorderBrush="#D9D9D9" IsCancel="True" Click="Back">

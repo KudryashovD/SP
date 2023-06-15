@@ -25,18 +25,6 @@ namespace SimpleProgrammer.UserFolder
             InitializeComponent();
             id = ID;
         }
-        private void Easy(object sender, RoutedEventArgs e)
-        {
-            GamesEasyTest window = new GamesEasyTest(id);
-            window.Show();
-            this.Close();
-        }
-        private void Hard(object sender, RoutedEventArgs e)
-        {
-            GamesHardTest window = new GamesHardTest(id);
-            window.Show();
-            this.Close();
-        }
         private void Back(object sender, RoutedEventArgs e)
         {
             GameWindow window = new GameWindow(id);

@@ -39,13 +39,13 @@ namespace SimpleProgrammer.UserFolder
                     {
                         window.FIO.Text = item2.FIO;
                         window.Phone.Text = item2.Phone;
+                        window.Hobby.Text = item2.Hobby;
                         window.Login.Text = item.Login;
                         window.Password.Password = item.Password;
                     }
                 }
             }
             window.Show();
-            this.Close();
         }
         private void Data(object sender, RoutedEventArgs e)
         {

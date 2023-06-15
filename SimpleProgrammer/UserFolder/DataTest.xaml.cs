@@ -25,18 +25,6 @@ namespace SimpleProgrammer.UserFolder
             InitializeComponent();
             id = ID;
         }
-        private void Easy(object sender, RoutedEventArgs e)
-        {
-            DataEasyTest window = new DataEasyTest(id);
-            window.Show();
-            this.Close();
-        }
-        private void Hard(object sender, RoutedEventArgs e)
-        {
-            DataHardTest window = new DataHardTest(id);
-            window.Show();
-            this.Close();
-        }
         private void Back(object sender, RoutedEventArgs e)
         {
             DataWindow window = new DataWindow(id);

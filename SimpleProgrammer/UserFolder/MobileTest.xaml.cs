@@ -25,18 +25,6 @@ namespace SimpleProgrammer.UserFolder
             InitializeComponent();
             id = ID;
         }
-        private void Easy(object sender, RoutedEventArgs e)
-        {
-            MobileEasyTest window = new MobileEasyTest(id);
-            window.Show();
-            this.Close();
-        }
-        private void Hard(object sender, RoutedEventArgs e)
-        {
-            MobileHardTest window = new MobileHardTest(id);
-            window.Show();
-            this.Close();
-        }
         private void Back(object sender, RoutedEventArgs e)
         {
             MobileWindow window = new MobileWindow(id);

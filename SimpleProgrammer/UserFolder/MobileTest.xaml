@@ -28,8 +28,6 @@
                     </Button.Template>
                 </Button>
                 <TextBlock FontSize="64" Text="Мобилка" VerticalAlignment="Center" TextAlignment="Center" Margin="679,32,534,770"/>
-                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Легко" Margin="282,272,0,517" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="591"/>
-                <TextBox HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Text="Сложно" Margin="948,272,0,517" FontSize="64" BorderThickness="3,3,3,3" BorderBrush="#FF42AAFF" Width="591"/>
             </Grid>
         </Border>
     </Viewbox>
