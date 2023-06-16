@@ -45,16 +45,23 @@
                 <TextBlock FontSize="48" Margin="298,290,593,547"><Run Language="ru-ru" Text="Количество пройденных тестов"/></TextBlock>
                 <TextBlock Text="Логин" FontSize="48" Margin="413,455,937,382"/>
                 <TextBlock FontSize="48" Margin="413,616,877,221"><Run Language="ru-ru" Text="Средний балл"/></TextBlock>
-                <Image Source="/Images/Arrow.png" Margin="-35,30,1345,772"/>
-                <Button Content="" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="176" Width="210" FontSize="32" Foreground="#D9D9D9" BorderBrush="#D9D9D9" IsCancel="True" Click="Back">
+                <Button Content="" HorizontalAlignment="Left" Margin="5,30,0,0" VerticalAlignment="Top" Height="176" Width="210" FontSize="32" Foreground="#D9D9D9" BorderBrush="#D9D9D9" IsCancel="True" Click="Back">
                     <Button.Template>
                         <ControlTemplate>
                             <Grid>
-                                <Image Source="/Images/Arrow.png" Margin="22,651,1402,124"/>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="540*"/>
+                                    <ColumnDefinition Width="200*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Rectangle RadiusX="20" RadiusY="20" StrokeThickness="2" Fill="#FF42AAFF" Grid.ColumnSpan="2"/>
+                                <Image Source="/Images/Arrow.png" Grid.ColumnSpan="2" Margin="7,-2,3,0"/>
+
                             </Grid>
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
+
             </Grid>
         </Border>
     </Viewbox>
