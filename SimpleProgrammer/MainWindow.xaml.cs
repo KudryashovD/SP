@@ -65,7 +65,7 @@ namespace SimpleProgrammer
                     this.Close();
                     Trace.Listeners.Add(new TextWriterTraceListener(File.Open("svodkalogin.txt", FileMode.OpenOrCreate)));
                     Trace.AutoFlush = true;
-                    MessageBox.Show("Добро пожаловать менеджер Олег!");
+                    MessageBox.Show("Добро пожаловать!");
                     Trace.WriteLine("-------------------------------");
                     Trace.WriteLine(Login.Text);
                     Trace.WriteLine(Password.Password);

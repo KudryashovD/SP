@@ -13,14 +13,14 @@
                 <Image Source="/Images/Menu.png" Margin="0,0,1380,0"/>
                 <Image Source="/Images/logoinf.png" Margin="12,330,1393,387"/>
                 <TextBlock Text="ФИО ребёнка" Width="560" FontSize="48" TextAlignment="Center" Margin="585,30,455,803"/>
-                <TextBox Name="FIO" TextAlignment="Center" FontSize="50" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="468,102,0,706" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" Width="817">
+                <TextBox Name="FIO" IsReadOnly="True" TextAlignment="Center" FontSize="50" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="468,102,0,706" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" Width="817">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="33"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox Name="Tests" TextAlignment="Center" FontSize="40" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="381,359,0,450" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" Width="543">
+                <TextBox Name="Tests" IsReadOnly="True" TextAlignment="Center" FontSize="40" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="381,359,0,450" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" Width="543">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="33"/>
@@ -28,14 +28,14 @@
                     </TextBox.Resources>
                 </TextBox>
                 <Image Source="/Images/logotest.png" Margin="1066,330,96,142"/>
-                <TextBox Name="Login" TextAlignment="Center" FontSize="40" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="381,518,0,291" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" Width="543">
+                <TextBox Name="Login" IsReadOnly="True" TextAlignment="Center" FontSize="40" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="381,518,0,291" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" Width="543">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="33"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox Name="Ball" TextAlignment="Center" FontSize="40" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="381,685,0,124" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" Width="543">
+                <TextBox Name="Ball" TextAlignment="Center" IsReadOnly="True" FontSize="40" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="381,685,0,124" RenderTransformOrigin="0.465,0.483" Background="White" BorderBrush="#FF42AAFF" BorderThickness="3,3,3,3" Width="543">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="33"/>
